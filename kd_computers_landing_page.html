@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="bg">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DK Computers — компютърни услуги и продажби</title>
+  <meta name="description" content="DK Computers — сервиз, поддръжка и продажба на компютри и периферия. Бързо обслужване, гаранция и индивидуален подход." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23007ACC'/><text x='50' y='58' font-size='48' text-anchor='middle' fill='white' font-family='Arial' font-weight='700'>DK</text></svg>" />
+  <style>
+    :root{--accent:#007acc;--muted:#6b7280;--bg:#f8fafc}
+    *{box-sizing:border-box}
+    body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;line-height:1.5;margin:0;background:var(--bg);color:#0f172a}
+    .container{max-width:1100px;margin:0 auto;padding:28px}
+    header{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+    .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit}
+    .logo{width:52px;height:52px;border-radius:10px;background:var(--accent);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700}
+    nav{display:flex;gap:18px;align-items:center}
+    a.btn{background:var(--accent);color:#fff;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600}
+
+    .hero{display:grid;grid-template-columns:1fr;gap:24px;align-items:center;padding:48px 0}
+    .hero h1{font-size:2rem;margin:0}
+    .hero p{color:var(--muted);margin:12px 0 20px}
+    .cards{display:flex;gap:12px;flex-wrap:wrap}
+    .card{background:#fff;padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(12,13,14,0.06);flex:1;min-width:220px}
+
+    section.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:18px}
+    .service{background:#fff;padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(12,13,14,0.04)}
+    .service h3{margin:6px 0}
+    .cta{display:flex;gap:12px;flex-wrap:wrap}
+
+    .about{display:flex;flex-direction:column;gap:12px;margin:30px 0;padding:24px;background:linear-gradient(90deg,#fff,#fbfdff);border-radius:14px}
+
+    footer{margin-top:30px;padding:24px 0;color:var(--muted)}
+
+    form{background:#fff;padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(12,13,14,0.04)}
+    label{display:block;margin-bottom:6px;font-weight:600}
+    input,textarea,select{width:100%;padding:10px;border-radius:8px;border:1px solid #e6e9ee;margin-bottom:12px}
+    button{background:var(--accent);color:#fff;border:none;padding:10px 14px;border-radius:10px;cursor:pointer}
+
+    @media(min-width:900px){.hero{grid-template-columns:1fr 420px}.hero h1{font-size:2.4rem}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <a class="brand" href="#">
+        <div class="logo">DK</div>
+        <div>
+          <div style="font-weight:700">DK Computers</div>
+          <div style="font-size:13px;color:var(--muted)">Сервиз • Продажби • Поддръжка</div>
+        </div>
+      </a>
+      <nav>
+        <a href="#services">Услуги</a>
+        <a href="#about">За нас</a>
+        <a href="#contact" class="btn">Свържи се</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <h1>DK Computers — бързи и надеждни компютърни решения</h1>
+          <p>Ремонт и ъпгрейд, поддръжка на фирмени мрежи, продажба на компютри и аксесоари. Гаранция, оригинални части и индивидуален подход.</p>
+          <div class="cards">
+            <div class="card">
+              <h3>Сервиз и ремонт</h3>
+              <p class="muted">Диагностика, ремонт на хардуер и софтуер, редовна поддръжка.</p>
+            </div>
+            <div class="card">
+              <h3>Продажби</h3>
+              <p class="muted">Нови и конфигурирани системи за офис и гейминг.</p>
+            </div>
+            <div class="card">
+              <h3>Фирмени решения</h3>
+              <p class="muted">Надеждна IT поддръжка и мрежова администрация.</p>
+            </div>
+          </div>
+          <div style="margin-top:18px" class="cta">
+            <a href="#contact" class="btn">Запази час</a>
+            <a href="#services">Виж услуги</a>
+          </div>
+        </div>
+
+        <aside>
+          <form id="contactForm">
+            <h3>Бързо запитване</h3>
+            <label for="name">Име</label>
+            <input id="name" name="name" placeholder="Иван Иванов" required />
+
+            <label for="email">Имейл / Телефон</label>
+            <input id="email" name="email" placeholder="ivan@example.com или 0885777183" required />
+
+            <label for="service">Услуга</label>
+            <select id="service" name="service">
+              <option>Ремонт</option>
+              <option>Продажба</option>
+              <option>Консултация</option>
+            </select>
+
+            <label for="message">Съобщение</label>
+            <textarea id="message" name="message" rows="4" placeholder="Кратко описание..." ></textarea>
+
+            <button type="submit">Изпрати</button>
+            <div id="formMsg" style="margin-top:10px;color:var(--muted)"></div>
+          </form>
+        </aside>
+      </section>
+
+      <section id="services" class="services">
+        <div class="service">
+          <h3>Диагностика & Ремонт</h3>
+          <p>Бърза и точна диагностика — хардуер, софтуер, операционни системи, BIOS, дънни платки.</p>
+        </div>
+        <div class="service">
+          <h3>Ъпгрейд & Съставяне</h3>
+          <p>Съставяне на персонализирани конфигурации, подобряване на производителността и охлаждането.</p>
+        </div>
+        <div class="service">
+          <h3>Фирмена поддръжка</h3>
+          <p>Отдалечена и на място поддръжка, мрежова сигурност, бекъп решения.</p>
+        </div>
+        <div class="service">
+          <h3>Продажби и консултации</h3>
+          <p>Помощ при избор на лаптоп, настолен компютър, периферия и компоненти.</p>
+        </div>
+      </section>
+
+      <section id="about" class="about">
+        <h2>За DK Computers</h2>
+        <p>DK Computers е малък екип от техници с опит в ремонта и поддръжката на компютърна техника. Нашият подход е честен — предлагаме възможно най-ефективното решение спрямо бюджета на клиента.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap">
+          <div style="min-width:180px">
+            <strong>Работно време</strong>
+            <div style="color:var(--muted)">Пон — Пет: 09:00 — 18:00</div>
+          </div>
+          <div style="min-width:180px">
+            <strong>Локация</strong>
+            <div style="color:var(--muted)">гр. Велико Търново</div>
+          </div>
+          <div style="min-width:180px">
+            <strong>Контакти</strong>
+            <div style="color:var(--muted)">+359 88 123 4567<br/>DKcomputers.bg@gmail.com</div>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
+          <div>&copy; <span id="year"></span> DK Computers — Всички права запазени.</div>
+          <div style="color:var(--muted)">Изработено с ❤️ — DK Computers</div>
+        </div>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    // Set current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Simple client-side form handler (does not send data anywhere — placeholder)
+    document.getElementById('contactForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      var name = document.getElementById('name').value.trim();
+      var email = document.getElementById('email').value.trim();
+      if(!name || !email){
+        document.getElementById('formMsg').textContent = 'Моля, въведете име и контакт.';
+        return;
+      }
+      document.getElementById('formMsg').textContent = 'Благодарим! Запитването е регистрирано. Ще се свържем скоро.';
+      // reset form after a short delay to mimic sending
+      setTimeout(function(){ document.getElementById('contactForm').reset(); }, 800);
+    });
+  </script>
+</body>
+</html>
